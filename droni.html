@@ -1,0 +1,85 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="styles.css">
+<head> <title>Droni</title></head>
+<html lang="it">
+<body class="corpo">
+  <ul class="indice">
+<li><a title="Home" href="index.html"><img src="images/home.jpg" height="40" width="40"> Home</a></li>
+<li><a title="LukeStarGeek" href="lukestargeek.html"><img src="images/logo_lsg.jpg" height="50" width="50"> LukeStarGeek</a></li>
+<li><a title="Progetti" href="progetti.html"><img src="images/progetti.jpg" height="40" width="40"> Progetti</a></li>
+<li><a title="Sistemi Operativi" href="so.html"><img src="images/so.jpg" height="40" width="40"> Sistemi Operativi</a></li>
+<li><a title="Programmi" href="programmi.html"><img src="images/programmi1.jpg" height="40" width="40">Programmi</a></li>
+<li><a title="Utility" href="utility.html"><img src="images/utility.jpg" height="40" width="40">Utility</a></li>
+</ul>
+
+<h1 class="rosso">Droni FPV e da ripresa</h1>
+<h2 class="blu">Le parti fondamentali di un drone FPV</h2>
+<table>
+  <td><p><img class="img_prog" src="images/frame.jpeg" height="90" width="90"><b><i>Frame</b></i>: il frame è il <b>telaio</b> del drone. Di solito è in <b>carbonio</b> per avere una buona resistenza e un basso peso. <br>
+  Sul mercato si possono trovare frame a prezzi diversi: si va dai €15 ai €70! Le differenze tra un frame di fascia alta e uno di fascia bassa sono la <b>resistenza agli urti</b> e la <b>propagazione delle vibrazioni</b> attraverso il carbonio.<br>
+  Il mio consiglio è di <b>non comprare telai di fascia bassa</b> perché possono essere pessimi.</p></td>
+<tr>
+  <td><p><img class="img_prog" src="images/fc.jpg" height="90" width="90"><b><i>Flight controller</b></i>: il flight controller è la "<b>mente</b>" del drone. Esso permette di controllare il drone ricevendo i segnali del radiocomando.<br>
+  Sulla scheda del flight controller sono presenti <b>numerosi sensori</b> come barometro, giroscopio e accelerometro, oltre a molti <b>pin</b> con cui si può interfacciare con altre periferiche.<br>
+  Tutti i flight controller sono identificati da una <b>F</b> seguita da un <b>numero</b>. Ad oggi esistono schede F1, F3, F4 ed F7.<br>
+  Le schede <b>F1</b> sono ormai cadute in <b>disuso</b>. Le schede <b>F3</b> stanno diventando <b>vecchie</b>. Oggi si usano principalmente schede <b>F4</b> ed <b>F7</b>, le più <b>potenti</b>.</p></td>
+<tr>
+  <td><p><img class="img_prog" src="images/esc.jpg" height="90" width="90"><b><i>ESC</b></i>: gli ESC (<b>Electronic Speed Controller</b>) regolano la velocità dei motori in base alle istruzioni ricevute dal flight controller.<br>
+  Le caratteristiche principali degli ESC sono la <b>corrente massima</b> e la <b>tensione massima</b>. Un ESC infatti va scelto in base alle <b>proprie esigenze</b> e alla corrente massima che possono consumare i motori.<br>
+  Un'altra caratteristica è il <b>protocollo</b> di comunicazione tra ESC e flight controller: può essere principalmente <b>PWM o DShot</b> (300, 600 o 1200).
+  Gli ESC si dividono inoltre in:
+  <li style="margin-top:-12px;"><b>singoli</b>, cioè una scheda che riesce a controllare un motore per volta</li>
+  <li><b>4 in 1</b>, cioè una scheda che integra 4 ESC e che quindi riesce a controllare 4 motori alla volta.</li></p></td>
+<tr>
+  <td><p><img class="img_prog" src="images/motore.jpg" height="90" width="90"><b><i>Motori (brushless)</b></i>: i motori forniscono <b>spinta</b> e controllano il drone attraverso la rotazione delle eliche. La <b>dimensione</b> di un motore è espressa da <b>quattro numeri</b> (es. 2207).
+  I primi due indicano il <b>diametro</b> dello statore, mentre gli ultimi due indicano l'<b>altezza</b> dello statore stesso.<br>
+  Quando si scelgono i motori bisogna prestare attenzione alla dimensione, alla corrente consumata ed al numero di <b>giri al minuto</b>. Quest'ultima grandezza è espressa da un numero seguito da <b>KV</b>, cioè giri al minuto per volt.<br>
+  Per batterie <b>4S</b> si usano motori da <b>2300-2600 KV</b>, mentre per batterie <b>6S</b> si usano motori da <b>1700-1850 KV</b>.</td>
+<tr>
+  <td><p><img class="img_prog" src="images/lipo.jpg" height="90" width="90"><b><i>Batteria</b></i>: la batteria è di tipo <b>LiPo (Polimeri di Litio)</b>. Essa fornisce corrente al drone e permette di far girare i motori. Il connettore è solitamente un <b>XT60</b>, mentre quello che permette una carica corretta (chiamato <b>bilanciatore</b>) è di tipo JST-XH.<br>
+    Le caratteristiche delle batterie sono tre:
+
+    <li style="margin-top:-12px;"><b>il numero di celle (S)</b>: il numero di celle determina la <b>tensione</b> della batteria. Una tensione maggiore indica una potenza maggiore, ma bisgna scegliere ESC e motori che supportano quella tensione. Per calcolare la tensione si <b>moltiplica il numero di celle per 3,7V</b>.<br>
+    Di conseguenza abbiamo: 1S=3,7V - 2S=7,4V - 3S=11,1V e così via.</li>
+    <li><b>la capacità (mAh)</b>: la capacità indica la <b>carica disponibile</b> della batteria quando è caricata alla sua tensione massima (4,2V/cella). Essa influenza il <b>tempo di volo</b> e le <b>dimensioni</b> della batteria, quindi anche il suo <b>peso</b>. Quando si sceglie una batteria bisogna avere una capacità sufficiente per consentire un buon tempo di volo, ma non troppo alta, altrimenti si rischia di aggiungere troppo peso al drone e di influenzare le sue caratteristiche di volo.</li>
+    <li><b>il tasso di scarica (C)</b>: il tasso di scarica indica quanta <b>corrente</b> si può scaricare dalla batteria senza <b>danneggiare</b> la stessa. Una batteria va scelta anche in base alla corrente consumata dai motori. Per calcolare la corrente massima di scarica della batteria si deve <b>moltiplicare il valore di C per la capacità della batteria</b> (espressa in Ah).</li></p>
+<tr>
+  <td><img class="img_prog" src="images/rx.jpg" height="90" width="90"><p><b><i>Ricevente</b></i>: la ricevente ha il compito di <b>ricevere i segnali</b> del radiocomando e di passarli al Flight Controller. Una ricevente va scelta in base al proprio <b>radiocomando</b> ed al tipo di <b>protocollo</b>.<br> È fondamentale comprare una ricevente <b>compatibile</b> con il proprio radiocomando.
+    Il protocollo indica il metodo di trasmissione dei segnali dalla ricevente al FC. Non bisogna comprare una ricvente con uscita solo PWM perchè non sarebbe compatibile con il Flight Controller. I protocolli più usati sono: <b>PPM</b>, <b>SBUS</b>, <b>UART</b> (seriale). Questi tre sono <b>compatibili</b> con la maggior parte dei flight controller.</p>
+<tr>
+  <td><img class="img_prog" src="images/cam.jpg" height="90" width="90"><p><b><i>Fotocamera</b></i>: la fotocamera serve per trasmettere il video del drone al visore, insieme alla trasmittente video. Una fotocamera FPV ha solitamente un'uscita analogica NTSC e/o PAL.<br>
+    Quando si sceglie una fotocamera bisogna considerare alcune caratteristiche:
+    <ul style="margin-top:-12px;"><li><b>il tipo di sensore (CMOS/CCD)</b>: i sensori CCD hanno un costo maggiore rispetto ai CMOS ma offrono alcuni vantaggi, tra cui:
+      <ul><li>Prestazioni migliori in condizioni di illuminazione difficili (es. alto contrasto, tramonto)</li>
+        <li>Assenza dell'effetto gelatina</li>
+        <li>Latenza minore</li></ul>
+    <li><b>la risoluzione della fotocamera (TVL)</b>: il numero di TVL indica quante linee diverse è possibile visualizzare sull'immagine. Una fotocamera con numero di TVL più alto ha una risoluzione maggiore, ma anche una latenza maggiore. Di solito si usano fotocamere da 600/800 TVL.</li>
+    <li><b>il campo visivo (FOV)</b>: il campo visivo indica l'angolo di visione della fotocamera, cioè quanto è ampia l'immagine. Esso è determinato dalla lunghezza focale dell'obiettivo.</li>
+    <li><b>lo standard video (NTSC/PAL)</b>: lo standard video indica il "protocollo" dell'immagine. Le fotocamere più recenti hanno un'uscita sia NTSC che PAL.</li>
+      </ul>
+<tr>
+  <td><p><img class="img_prog" src="images/vtx.jpg" height="90" width="90"><b><i>Trasmittente video (VTX)</b></i>: la trasmittente video invia il segnale proveniente dalla fotocamera al visore. <br>
+    Le caratteristiche delle VTX sono le seguenti:
+    <li style="margin-top:-12px;"><b>la potenza</b>: la potenza indica la potenza irradiata tramite l'antenna. Di solito è tra 25mW e 800mW. Una potenza maggiore indica maggiore portata e un segnale più pulito a distanze elevate o con degli ostacoli tra il visore ed il drone. Una potenza maggiore però causa rumore sui canali vicini e quindi potrebbe risultare difficile volare con gli amici.</li>
+      <li><b>lo standard video (NTSC/PAL)</b>: le VTX più recenti supportano sia NTSC sia PAL.</li>
+      <li><b>qualità del segnale</b>: le VTX più economiche possono avere il difetto di non essere precise nella trasmissione. Questo comporta un segnale video di bassa qualità.</li>
+      <li><b>Smart Audio/Tramp</b>: uno di questi due protocolli permette di cambiare le impostazioni della trasmittente video direttamente dal flight controller o dal radiocomando.</li>
+      <div class="rosso" style="font-size: large;">Attenzione: non accendere mai una VTX senza l'antenna collegata perché rischi di bruciarla!</div>
+
+</table>
+
+
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4410920,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('http://s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?4410920&101" alt="contatore free" border="0"></a></noscript>
+<!-- Histats.com  END  -->

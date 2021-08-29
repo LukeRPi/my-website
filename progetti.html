@@ -1,0 +1,53 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="styles.css">
+<head> <title>Progetti</title></head>
+<html lang="it">
+<body class="corpo">
+
+  <ul class="indice">
+<li><a title="Home" href="index.html"><img src="images/home.jpg" height="40" width="40"> Home</a></li>
+<li><a title="LukeStarGeek" href="lukestargeek.html"><img src="images/logo_lsg.jpg" height="50" width="50"> LukeStarGeek</a></li>
+<li><a title="Programmi" href="programmi.html"><img src="images/programmi1.jpg" height="50" width="50"> Programmi</a></li>
+<li><a title="Sistemi Operativi" href="so.html"><img src="images/so.jpg" height="40" width="40"> Sistemi Operativi</a></li>
+<li><a title="Droni" href="droni.html"><img src="images/droni.jpg" height="40" width="40">Droni</a></li>
+<li><a title="Utility" href="utility.html"><img src="images/utility.jpg" height="40" width="40">Utility</a></li>
+</ul>
+
+<h1 class="rosso">I miei progetti</h1>
+
+<h2 class="blu">Adattatore trainer per radio FlySky-FrSky</h2>
+<p>L’adattatore <b>trainer</b> per radio <b>FrSky</b> è un semplice circuito che ho progettato per usare una ricevente <b>FlySky</b> con uscita <b>PPM</b> come input per la funzione trainer del mio radiocomando FrSky. Il circuito consiste in un <b>diodo di protezione</b> per l’inversione di polarità, due <b>LED</b> con una resistenza in serie che confermano o meno il corretto inserimento del cavo di alimentazione e poi i <b>collegamenti tra input/output PPM</b> e le relative <b>alimentazioni</b>. Il circuito si interfaccia con la radio tramite un <b>jack 3,5 mm</b> e un <b>cavo servo</b> per l’alimentazione, mentre si collega alla ricevente con un solo cavo servo che trasporta segnale e alimentazione.
+<img src="images/trainer1.png" height="326" width="550">
+<img src="images/trainer2.jpg" height="311" width="550"></p>
+<br>
+
+
+<h2 class="blu">Radar ADS-B accessibile da remoto con DDNS</h2> <img class="img_prog" src="images/adsb1.jpg" height="500" width="375">
+<p>Questo progetto è un server di ricezione e decodifica di dati <b>ADS-B</b> dagli aerei. A livello hardware è formato da un Raspberry Pi 3 con relativa microSD, un case con ventola, una chiavetta SDR con relativa antenna per la ricezione dei dati e ovviamente un alimentatore 5V 2,5A. Il programma che riceve e decodifica i pacchetti ADS-B permette la visualizzazione dei dati ricevuti su un sito web locale. Ho reso l’interfaccia grafica web accessibile anche da remoto tramite un <b>DDNS (DNS dinamico)</b> impostato sul router. Ho poi configurato il router per reindirizzare la <b>porta pubblica 80</b> (utilizzata dal protocollo http) al Raspberry Pi sulla <b>porta locale 8080</b> su cui è possibile visualizzare il sito. In questo modo dall’esterno è possibile accedere solo ed esclusivamente al sito web che risiede sul Raspberry Pi inserendo <b>nome utente</b> e <b>password</b> impostati in un file di configurazione.
+
+L’installazione e l’impostazione dell’esecuzione automatica del programma sono eseguite via <b>terminale</b> (in questo caso per comodità ho usato una connessione SSH dal mio pc al Raspberry), mentre l’impostazione del DDNS e l’apertura delle porte sono eseguite tramite l’<b>interfaccia grafica del router</b>.
+Io ho usato il metodo del DDNS per un determinato programma, ma cambiando l’associazione delle porte lo si può usare anche per accedere ad altri servizi, come per esempio server <b>SSH</b> (porta 22), <b>FTP</b> (porte 20 e 21) ecc.
+</p>
+<br>
+
+
+
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4410920,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('http://s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?4410920&101" alt="contatore free" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+
+
+</body>
+</html>

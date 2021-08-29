@@ -1,0 +1,78 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="styles.css">
+<head>
+  <title>LukeStarGeek</title>
+</head>
+<style>
+table {
+  border-spacing: 65px 0;
+}
+</style>
+
+<body class="corpo">
+<ul class="indice">
+<li><a title="Home" href="index.html"><img src="images/home.jpg" height="40" width="40"> Home</a></li>
+<li><a title="Progetti" href="progetti.html"><img src="images/progetti.jpg" height="40" width="40"> Progetti</a></li>
+<li><a title="Programmi" href="programmi.html"><img src="images/programmi1.jpg" height="50" width="50"> Programmi</a></li>
+<li><a title="Sistemi Operativi" href="so.html"><img src="images/so.jpg" height="40" width="40"> Sistemi Operativi</a></li>
+<li><a title="Droni" href="droni.html"><img src="images/droni.jpg" height="40" width="40">Droni</a></li>
+<li><a title="Utility" href="utility.html"><img src="images/utility.jpg" height="40" width="40">Utility</a></li>
+</ul>
+
+
+<center>
+<table class="center" border="50" style="font-weight:bold;font-size:30px;">
+  <td><a title="Canale YouTube" href="https://www.youtube.com/channel/UCfnXcuQf6ZdE5-ExhA4_xPQ"> Canale YouTube </a></td>
+  <td><a title="Telegram" href="https://t.me/lukestargeek"> Canale Telegram </a></td>
+  <td><a title="Instagram" href="https://www.instagram.com/lukestargeek/"> Instagram </a></td>
+  <tr>
+  <td><img src="images/logo_youtube.jpg" height="50" width="120"></td>
+  <td><img src="images/logo_telegram.png" height="55" width="55"></td>
+  <td><img src="images/logo_instagram.png" height="55" width="55"></td>
+</table>
+</center>
+
+<center style="padding-top:20px;"><iframe style="border:10px solid black;" class="latestVideoEmbed" vnum='0' cid="UCfnXcuQf6ZdE5-ExhA4_xPQ" width="600" height="340" frameborder="0" allowfullscreen></iframe></center>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+
+function loadVideo(iframe) {
+  $.getJSON(reqURL + iframe.getAttribute('cid'),
+    function(data) {
+      var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+      console.log(videoNumber);
+      var link = data.items[videoNumber].link;
+      id = link.substr(link.indexOf("=") + 1);
+      iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=1&autoplay=0");
+    }
+  );
+}
+
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++) {
+  loadVideo(iframes[i]);
+}
+
+</script>
+
+
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4410920,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('http://s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?4410920&101" alt="contatore free" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+</body>

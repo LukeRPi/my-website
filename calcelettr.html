@@ -1,0 +1,146 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="styles.css">
+<head> <title>Calcoli elettrici</title></head>
+<html lang="it">
+<body class="corpo">
+
+  <ul class="indice">
+<li><a title="Home" href="index.html"><img src="images/home.jpg" height="40" width="40"> Home</a></li>
+<li><a title="LukeStarGeek" href="lukestargeek.html"><img src="images/logo_lsg.jpg" height="50" width="50"> LukeStarGeek</a></li>
+<li><a title="Programmi" href="programmi.html"><img src="images/programmi1.jpg" height="50" width="50"> Programmi</a></li>
+<li><a title="Sistemi Operativi" href="so.html"><img src="images/so.jpg" height="40" width="40"> Sistemi Operativi</a></li>
+<li><a title="Droni" href="droni.html"><img src="images/droni.jpg" height="40" width="40">Droni</a></li>
+<li><a title="Progetti" href="progetti.html"><img src="images/progetti.jpg" height="40" width="40"> Progetti</a></li>
+<li><a title="Utility" href="utility.html"><img src="images/utility.jpg" height="40" width="40">Utility</a></li>
+</ul>
+
+<h1 class="rosso">Calcoli elettrici</h1>
+
+<style>
+table {
+  border-spacing: 75px 0;
+}
+</style>
+
+
+<center style="padding-top:20px;">
+<table>
+<td>
+
+<h2 class="blu" style="padding-top:20px;">Calcolo reattanza capacitiva</h2>
+<input type="number" placeholder="Frequenza" id="f">
+<select id="mulhzxc">
+  <option value="1">Hz</option>
+  <option value="2">kHz</option>
+  <option value="3">MHz</option>
+  <option value="4">GHz</option>
+</select>
+<input type="number" placeholder="Capacità" id="c">
+<select id="mulcapxc">
+  <option value="1">F</option>
+  <option value="2">mF</option>
+  <option value="3">µF</option>
+  <option value="4">nF</option>
+  <option value="5">pF</option>
+</select>
+<button onclick="calcrecap()">Calcola</button>
+<p id="reatres">Reattanza capacitiva (Ohm)</p>
+</td>
+
+
+
+<td>
+<h2 class="blu" style="padding-top:20px;">Calcolo reattanza induttiva</h2>
+<input type="number" placeholder="Frequenza" id="fi">
+<select id="mulhzxl">
+  <option value="1">Hz</option>
+  <option value="2">kHz</option>
+  <option value="3">MHz</option>
+  <option value="4">GHz</option>
+</select>
+
+<input type="number" placeholder="Induttanza" id="l">
+<select id="mulindxl">
+  <option value="1">H</option>
+  <option value="2">mH</option>
+  <option value="3">µH</option>
+  <option value="4">nH</option>
+</select>
+<button onclick="calcreind()">Calcola</button>
+<p id="reatindres">Reattanza induttiva (Ohm)</p>
+</td>
+</table>
+</center>
+
+
+
+
+
+<center style="padding-top:20px;">
+<table>
+<td>
+
+<h2 class="blu" style="padding-top:20px;">Calcolo frequenza circuito LC</h2>
+<input type="number" placeholder="Induttanza" id="fl">
+<select id="mulindlc">
+  <option value="1">H</option>
+  <option value="2">mH</option>
+  <option value="3">µH</option>
+  <option value="4">nH</option>
+</select>
+<input type="number" placeholder="Capacità" id="fc">
+<select id="mulcaplc">
+  <option value="1">F</option>
+  <option value="2">mF</option>
+  <option value="3">µF</option>
+  <option value="4">nF</option>
+  <option value="5">pF</option>
+</select>
+<button onclick="calcfreqlc()">Calcola</button>
+<p id="freqrres">Frequenza di risonanza (Hz)</p>
+</td>
+</table>
+</center>
+
+
+
+<center style="padding-top:20px;">
+  <h2 class="blu">Calcolo resistenza led</h2>
+  <input type="number" placeholder="Tensione di alimentazione" id="vin">
+  <br>
+  <select id="cled">
+    <option value="1">Selezionare colore LED</option>
+    <option value="2">Rosso</option>
+    <option value="3">Giallo</option>
+    <option value="4">Verde</option>
+    <option value="5">Bianco</option>
+    <option value="6">Blu</option>
+  </select>
+  <button onclick="calcrled()">Calcola</button>
+  <p id="rledres">Resistenza (Ohm)</p>
+
+
+
+<script src="calc.js"></script>
+
+
+
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4410920,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('http://s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?4410920&101" alt="contatore free" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+
+
+</body>
+</html>
